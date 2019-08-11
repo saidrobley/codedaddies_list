@@ -33,7 +33,7 @@
     </div>
   </nav>
 
-  <ul class="sidenav" id="mobile-demo">
+  <ul class="sidenav #EE6E73" id="mobile-demo">
     <li><a href="/">Home</a></li>
     
   </ul>
@@ -63,7 +63,17 @@
                 <p class="light center">We built this with ❤️</p>
             </div>
         </div>
+        <form action="{% url 'new_search' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="search" placeholder="search">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
   </div>
+  {% block content %}
+
+  {% endblock %}
   </div>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

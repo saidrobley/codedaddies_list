@@ -1,3 +1,7 @@
 .sidenav {
-  background-color: red;
+  background-color: #EE6E73 !important;
+}
+
+li a {
+  color: white !important;
 }
